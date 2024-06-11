@@ -66,8 +66,8 @@ class Buttons(object):
     BACK_BUTTON = [[InlineKeyboardButton("☜ Back", callback_data="start")]]
     USER_START_BUTTONS = [
         [
-            InlineKeyboardButton("About Me", callback_data="about"),
-            InlineKeyboardButton("Close", callback_data="close"),
+            InlineKeyboardButton("😊 About Me", callback_data="about"),
+            InlineKeyboardButton("🔒 Close", callback_data="close"),
         ],
     ]
 
