@@ -13,8 +13,8 @@ import string
 async def link_generator(client: Client, message: types.Message):
     while True:
         try:
-            ask_text = "Forward Message From The DB Channel..\Or Send The DB Channel Post Link\n"
-            ask_text += "Or Send any text directly To Get The link\n\n/Cancel To Cancel The Process"
+            ask_text = "Forword message from DB Channel\nOr send the DB Channel post link\n"
+            ask_text += "Or send any text directly to get the link\n\n/cancel to cancel the process"
             channel_message = await client.ask(
                 text=ask_text,
                 chat_id=message.from_user.id,
