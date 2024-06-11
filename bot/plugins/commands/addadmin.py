@@ -10,13 +10,13 @@ from bot.utils import add_admin, get_admins, remove_admin
 async def addadmin(client: Client, message: Message):
     if len(message.command) != 2:
         admins = await get_admins()
-        text = "  — Current Admins\n"
+        text = " - Current Admins\n"
         for admin in admins:
             try:
                 user = await client.get_users(admin)
-                text += f"- {user.mention(style='md')} ({user.id})\n"
+                text += f" - {user.mention(style='md')} ({user.id})\n"
             except:
-                text += f"- {admin}\n"
+                text += f" - {admin}\n"
         await message.reply_text(f"Usage: /addadmin user_id\n\n{text}")
         return
 
@@ -49,9 +49,9 @@ async def admins(client: Client, message: Message):
     for admin in admins:
         try:
             user = await client.get_users(admin)
-            text += f" - {user.mention(style='md')} ({user.id})\n"
+            text += f"- {user.mention(style='md')} ({user.id})\n"
         except:
-            text += f" - {admin}\n"
+            text += f"- {admin}\n"
     await message.reply_text(text)
 
 
