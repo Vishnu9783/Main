@@ -33,7 +33,7 @@ class Config(object):
 
 
 class Script(object):
-    START_MESSAGE = """𝖧𝖾𝗒 {first_name} 𝖶𝖾𝗅𝖼𝗈𝗆𝖾 T𝗈 Ou𝗋 𝖬𝗈𝗏𝗂𝖾 A𝗇𝖽 𝖶𝖾𝖻𝗌𝖾𝗋𝗂𝖾𝗌 𝖯𝗋𝗈𝗏𝗂𝖽𝖾𝗋 𝖡𝗈𝗍. 𝖤𝗑𝖼𝗅𝗎𝗌𝗂𝗏𝖾𝗅𝗒 W𝗈𝗋𝗄 F𝗈𝗋 <a href='https://t.me/Vip_studios'>𝖵𝖨𝖯 𝖲𝗍𝗎𝖽𝗂𝗈𝗌</a> !!\n\n𝖤𝗑𝖼𝗅𝗎𝗌𝗂𝗏𝖾 𝖢𝗈𝗇𝗍𝖾𝗇𝗍, 𝖵𝖨𝖯 𝖤𝗑𝗉𝖾𝗋𝗂𝖾𝗇𝖼𝖾."""
+    START_MESSAGE = """😎 𝖧𝖾𝗒 {first_name} 𝖶𝖾𝗅𝖼𝗈𝗆𝖾 𝗍𝗈 𝗈𝗎𝗋 𝖬𝗈𝗏𝗂𝖾 𝖺𝗇𝖽 𝖶𝖾𝖻𝗌𝖾𝗋𝗂𝖾𝗌 𝖯𝗋𝗈𝗏𝗂𝖽𝖾𝗋 𝖡𝗈𝗍. 𝖤𝗑𝖼𝗅𝗎𝗌𝗂𝗏𝖾𝗅𝗒 𝗐𝗈𝗋𝗄 𝖿𝗈𝗋 <a href='https://t.me/Vip_studios'>𝖵𝖨𝖯 𝖲𝗍𝗎𝖽𝗂𝗈𝗌</a> !!\n\n𝖤𝗑𝖼𝗅𝗎𝗌𝗂𝗏𝖾 𝖢𝗈𝗇𝗍𝖾𝗇𝗍, 𝖵𝖨𝖯 𝖤𝗑𝗉𝖾𝗋𝗂𝖾𝗇𝖼𝖾."""
 
     HELP_MESSAGE = os.environ.get(
         "HELP_MESSAGE",
