@@ -14,9 +14,9 @@ async def addadmin(client: Client, message: Message):
         for admin in admins:
             try:
                 user = await client.get_users(admin)
-                text += f" - {user.mention(style='md')} ({user.id})\n"
+                text += f"- {user.mention(style='md')} ({user.id})\n"
             except:
-                text += f" - {admin}\n"
+                text += f"- {admin}\n"
         await message.reply_text(f"Usage: /addadmin user_id\n\n{text}")
         return
 
