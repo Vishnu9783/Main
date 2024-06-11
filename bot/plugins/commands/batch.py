@@ -12,7 +12,7 @@ from database import db
 )
 @check
 async def batch(bot: pyrogram.Client, message: pyrogram.types.Message):
-    ask_text = "𝖲𝖾𝗇𝖽 𝖬𝖾 𝖳𝗁𝖾 𝖥𝗂𝗋𝗌𝗍 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖬𝖾𝗌𝗌𝖺𝗀𝖾 𝗈𝗋 𝖥𝗂𝗅𝖾 𝖫𝗂𝗇𝗄 𝖳𝗈 𝖠𝖽𝖽 𝖳𝗈 𝖳𝗁𝖾 𝖡𝖺𝗍𝖼𝗁\n\n𝐄𝐱𝐚𝐦𝐩𝐥𝐞: https://t.me/MPlayLink/245\n\n"
+    ask_text = "𝖲𝖾𝗇𝖽 𝖬𝖾 𝖳𝗁𝖾 𝖥𝗂𝗋𝗌𝗍 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖬𝖾𝗌𝗌𝖺𝗀𝖾 𝗈𝗋 𝖥𝗂𝗅𝖾 𝖫𝗂𝗇𝗄 𝖳𝗈 𝖠𝖽𝖽 𝖳𝗈 𝖳𝗁𝖾 𝖡𝖺𝗍𝖼𝗁."
 
     ask = await message.chat.ask(ask_text, filters=pyrogram.filters.text)
 
@@ -112,14 +112,14 @@ async def batch(bot: pyrogram.Client, message: pyrogram.types.Message):
     file_link = f"{url}?start=batch_{_id}"
 
     await ask.reply_text(
-        f"𝐘𝐨𝐮𝐫 𝐁𝐚𝐭𝐜𝐡 𝐇𝐚𝐬 𝐁𝐞𝐞𝐧 𝐂𝐫𝐞𝐚𝐭𝐞𝐝 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲. 𝐘𝐨𝐮 𝐂𝐚𝐧 𝐀𝐜𝐜𝐞𝐬𝐬 𝐈𝐓 𝐅𝐫𝐨𝐦 \n\n`{file_link}`",
+        f"𝖸𝗈𝗎𝗋 𝖡𝖺𝗍𝖼𝗁 𝖧𝖺𝗌 𝖡𝖾𝖾𝗇 𝖲𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅𝗅𝗒 𝖢𝗋𝖾𝖺𝗍𝖾𝖽. 𝖸𝗈𝗎 𝖢𝖺𝗇 𝖠𝖼𝖼𝖾𝗌𝗌 𝖨𝗍 𝖥𝗋𝗈𝗆.\n\n`{file_link}`",
         disable_web_page_preview=True,
         reply_markup=pyrogram.types.InlineKeyboardMarkup(
             [
-                [pyrogram.types.InlineKeyboardButton("Oᴘᴇɴ Bᴀᴛᴄʜ", url=file_link)],
+                [pyrogram.types.InlineKeyboardButton("Open Batch", url=file_link)],
                 [
                     pyrogram.types.InlineKeyboardButton(
-                        "Sʜᴀʀᴇ Bᴀᴛᴄʜ", url=f"https://t.me/share/url?url={file_link}"
+                        "Share Batch", url=f"https://t.me/share/url?url={file_link}"
                     )
                 ],
             ]
