@@ -63,7 +63,7 @@ async def handle_file(
     file_message = await copy_message(message, user_chat_id, caption=caption[:1000], reply_markup=None)
 
     temp_message = await file_message.reply_text(
-        f"Your 📁 file will auto delete in ⏰ {human_readable_time(message_delete_time)}.↗ Forward it anywhere or save it privately before downloading."
+        f"⏳𝖡𝖾𝖿𝗈𝗋𝖾 𝖽𝗈𝗐𝗇𝗅𝗈𝖺𝖽𝗂𝗇𝗀 𝗍𝗁𝖾 𝖿𝗂𝗅𝖾𝗌, 𝗉𝗅𝖾𝖺𝗌𝖾 𝗍𝗋𝖺𝗇𝗌𝖿𝖾𝗋 𝗍𝗁𝖾𝗆 𝗍𝗈 𝖺𝗇𝗈𝗍𝗁𝖾𝗋 𝗅𝗈𝖼𝖺𝗍𝗂𝗈𝗇 𝗈𝗋 𝗌𝖺𝗏𝖾 𝗍𝗁𝖾𝗆 𝗂𝗇 𝖲𝖺𝗏𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾𝗌, 𝖳𝗁𝖾𝗒 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖽𝖾𝗅𝖾𝗍𝖾𝖽 𝗂𝗇 {human_readable_time(message_delete_time)}."
     )
 
     await schedule_deletion(temp_message.chat.id, temp_message.id, message_delete_time)
@@ -109,7 +109,7 @@ async def batch_handler(
         await sleep(1)
 
     temp_message = await message.reply_text(
-        f"Your 📁 files will auto delete in ⏰ {human_readable_time(file_delete_time)}.↗ Forward them anywhere or save them privately before downloading."
+        f"⏳𝖡𝖾𝖿𝗈𝗋𝖾 𝖽𝗈𝗐𝗇𝗅𝗈𝖺𝖽𝗂𝗇𝗀 𝗍𝗁𝖾 𝖿𝗂𝗅𝖾𝗌, 𝗉𝗅𝖾𝖺𝗌𝖾 𝗍𝗋𝖺𝗇𝗌𝖿𝖾𝗋 𝗍𝗁𝖾𝗆 𝗍𝗈 𝖺𝗇𝗈𝗍𝗁𝖾𝗋 𝗅𝗈𝖼𝖺𝗍𝗂𝗈𝗇 𝗈𝗋 𝗌𝖺𝗏𝖾 𝗍𝗁𝖾𝗆 𝗂𝗇 𝖲𝖺𝗏𝖾𝖽 𝖬𝖾𝗌𝗌𝖺𝗀𝖾𝗌, 𝖳𝗁𝖾𝗒 𝗐𝗂𝗅𝗅 𝖻𝖾 𝖽𝖾𝗅𝖾𝗍𝖾𝖽 𝗂𝗇 {human_readable_time(message_delete_time)}."
     )
 
     await schedule_deletion(temp_message.chat.id, temp_message.id, message_delete_time)
