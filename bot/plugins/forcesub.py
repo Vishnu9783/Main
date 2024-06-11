@@ -50,13 +50,13 @@ async def forcesub(c: Client, m: Message):
         markup.append(
             [
                 InlineKeyboardButton(
-                    text="🔄 Refresh", callback_data=f"refresh_{command}"
+                    text="Try Again", callback_data=f"refresh_{command}"
                 )
             ]
         )
         await m.reply(
             text=text
-            + "\nYou are not yet joined our channel. First join and then press the refresh button 🤤",
+            + "\n𝖧𝖾𝗅𝗅𝗈, 𝗒𝗈𝗎 𝗁𝖺𝗏𝖾 𝗍𝗈 𝗃𝗈𝗂𝗇 𝗆𝗒 𝖼𝗁𝖺𝗇𝗇𝖾𝗅𝗌 𝗍𝗈 𝗀𝖾𝗍 𝗒𝗈𝗎𝗋 𝖿𝗂𝗅𝖾𝗌. 𝖪𝗂𝗇𝖽𝗅𝗒 𝗃𝗈𝗂𝗇 𝗍𝗁𝖾 𝖼𝗁𝖺𝗇𝗇𝖾𝗅𝗌 𝖺𝗇𝖽 𝗍𝗋𝗒 𝖺𝗀𝖺𝗂𝗇.\𝗇\𝗇𝖤𝗑𝖼𝗅𝗎𝗌𝗂𝗏𝖾 𝖢𝗈𝗇𝗍𝖾𝗇𝗍, 𝖵𝖨𝖯 𝖤𝗑𝗉𝖾𝗋𝗂𝖾𝗇𝖼𝖾.",
             reply_markup=InlineKeyboardMarkup(markup),
             quote=True,
         )
@@ -91,12 +91,12 @@ async def refresh_cb(c: Client, m):
         )
         filename = await create_channel_status_file(channel_status)
         await m.message.edit(
-            text=f"Please join the following channels to use this bot:\n\n{filename}\n"
-            "You are not yet joined our channel. First join and then press the refresh button 🤤",
+            text=f"𝖯𝗅𝖾𝖺𝗌𝖾 𝖩𝗈𝗂𝗇 𝖳𝗁𝖾 𝖥𝗈𝗅𝗅𝗈𝗐𝗂𝗇𝗀 𝖢𝗁𝖺𝗇𝗇𝖾𝗅𝗌 𝖳𝗈 𝖴𝗌𝖾 𝖳𝗁𝗂𝗌 𝖡𝗈𝗍:\n\n{filename}\n"
+            "𝖧𝖾𝗅𝗅𝗈, 𝗒𝗈𝗎 𝗁𝖺𝗏𝖾 𝗍𝗈 𝗃𝗈𝗂𝗇 𝗆𝗒 𝖼𝗁𝖺𝗇𝗇𝖾𝗅𝗌 𝗍𝗈 𝗀𝖾𝗍 𝗒𝗈𝗎𝗋 𝖿𝗂𝗅𝖾𝗌. 𝖪𝗂𝗇𝖽𝗅𝗒 𝗃𝗈𝗂𝗇 𝗍𝗁𝖾 𝖼𝗁𝖺𝗇𝗇𝖾𝗅𝗌 𝖺𝗇𝖽 𝗍𝗋𝗒 𝖺𝗀𝖺𝗂𝗇.\𝗇\𝗇𝖤𝗑𝖼𝗅𝗎𝗌𝗂𝗏𝖾 𝖢𝗈𝗇𝗍𝖾𝗇𝗍, 𝖵𝖨𝖯 𝖤𝗑𝗉𝖾𝗋𝗂𝖾𝗇𝖼𝖾.",
             reply_markup=InlineKeyboardMarkup(markup),
         )
         return
-    await m.message.edit("**You are Authorized 😎**\n\nNow you can use me 😉")
+    await m.message.edit("𝖸𝗈𝗎 𝖼𝖺𝗇 𝗎𝗌𝖾 𝗆𝖾 𝗇𝗈𝗐 𝗍𝗁𝖺𝗍 𝗉𝖾𝗋𝗆𝗂𝗌𝗌𝗂𝗈𝗇 𝗁𝖺𝗌 𝖻𝖾𝖾𝗇 𝗀𝗋𝖺𝗇𝗍𝖾𝖽 😎")
 
     if command:
         m.message.from_user = m.from_user
@@ -107,9 +107,9 @@ async def refresh_cb(c: Client, m):
 
 
 async def create_channel_status_file(channel_status):
-    text = "Channel Status:\n\n"
+    text = "𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖲𝗍𝖺𝗍𝗎𝗌 :-\n\n"
     for i, channel in enumerate(channel_status, start=1):
-        text += f"{i}. Channel {i} - {'✅ Joined' if channel['joined'] else '❌ Not Joined'}\n"
+        text += f"{i}. 𝖢𝗁𝖺𝗇𝗇𝖾𝗅{i} - {'✅ 𝖩𝗈𝗂𝗇𝖾𝖽' if channel['joined'] else '❌ 𝖭𝗈𝗍 𝖩𝗈𝗂𝗇𝖾𝖽'}\n"
     return text
 
 
