@@ -10,7 +10,7 @@ from bot.utils import add_admin, get_admins, remove_admin
 async def addadmin(client: Client, message: Message):
     if len(message.command) != 2:
         admins = await get_admins()
-        text = "◆ Current Admins \n"
+        text = "- Current Admins \n"
         for admin in admins:
             try:
                 user = await client.get_users(admin)
